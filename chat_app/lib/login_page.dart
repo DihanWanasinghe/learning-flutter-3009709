@@ -35,6 +35,7 @@ class LoginPage extends StatelessWidget {
             height: 200,
           ),
           Container(
+            color: Colors.blue,
             height: 150,
             width: 150,
             // child: FlutterLogo(),
