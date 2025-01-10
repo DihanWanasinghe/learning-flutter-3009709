@@ -94,7 +94,7 @@ class chatPage extends StatelessWidget {
             ),
             height: 100,
             decoration: BoxDecoration(
-                color: Colors.black38,
+                color: Colors.black,
                 borderRadius: BorderRadius.vertical(top: Radius.circular(24))),
           )
         ],
