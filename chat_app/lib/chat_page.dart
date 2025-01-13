@@ -8,6 +8,7 @@ class chatPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
+        elevation:0 ,
         title: Text("Hi Dihan"),
         centerTitle: true,
         actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
