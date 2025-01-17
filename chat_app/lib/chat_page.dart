@@ -1,5 +1,37 @@
 import 'package:flutter/material.dart';
 
+Widget getChatBubble(alignment,message){
+
+ return Align(
+    alignment: alignment,
+    child: Container(
+      padding: EdgeInsets.all(24),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            message,
+            style: TextStyle(fontSize: 20, color: Colors.white),
+          ),
+          Image.network(
+            'https://3009709.youcanlearnit.net/Alien_LIL_131338.png',
+            height: 200,
+          )
+        ],
+      ),
+      margin: EdgeInsets.all(50),
+      decoration: BoxDecoration(
+          color: Colors.grey,
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(12),
+              topRight: Radius.circular(12),
+              bottomLeft: Radius.circular(12))),
+    )
+ );
+
+
+}
+
 class ChatPage extends StatelessWidget {
   const ChatPage({Key? key}) : super(key: key);
 
@@ -25,85 +57,10 @@ class ChatPage extends StatelessWidget {
             child: ListView(
               children: [
                 //TODO: Remove duplicated code
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Container(
-                    padding: EdgeInsets.all(24),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(
-                          'Hi, this is your message!',
-                          style: TextStyle(fontSize: 20, color: Colors.white),
-                        ),
-                        Image.network(
-                          'https://3009709.youcanlearnit.net/Alien_LIL_131338.png',
-                          height: 200,
-                        )
-                      ],
-                    ),
-                    margin: EdgeInsets.all(50),
-                    decoration: BoxDecoration(
-                        color: Colors.grey,
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(12),
-                            topRight: Radius.circular(12),
-                            bottomLeft: Radius.circular(12))),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Container(
-                    padding: EdgeInsets.all(24),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(
-                          'Hi, this is your message!',
-                          style: TextStyle(fontSize: 20, color: Colors.white),
-                        ),
-                        Image.network(
-                          'https://3009709.youcanlearnit.net/Alien_LIL_131338.png',
-                          height: 200,
-                        )
-                      ],
-                    ),
-                    margin: EdgeInsets.all(50),
-                    decoration: BoxDecoration(
-                        color: Colors.grey,
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(12),
-                            topRight: Radius.circular(12),
-                            bottomLeft: Radius.circular(12))),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Container(
-                    padding: EdgeInsets.all(24),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(
-                          'Hi, this is your message!',
-                          style: TextStyle(fontSize: 20, color: Colors.white),
-                        ),
-                        Image.network(
-                          'https://3009709.youcanlearnit.net/Alien_LIL_131338.png',
-                          height: 200,
-                        )
-                      ],
-                    ),
-                    margin: EdgeInsets.all(50),
-                    decoration: BoxDecoration(
-                        color: Colors.grey,
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(12),
-                            topRight: Radius.circular(12),
-                            bottomLeft: Radius.circular(12))),
-                  ),
-                ),
-              ],
+                getChatBubble(Alignment.centerLeft, "Hi I'm Dihan"),
+                getChatBubble(Alignment.centerRight, "Hi Dihan"),
+                getChatBubble(Alignment.centerRight, "Hope you are doing well")
+               ],
             ),
           ),
           Container(
