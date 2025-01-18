@@ -1,3 +1,5 @@
+import 'package:chat_app/Widgets/chat_bubble.dart';
+import 'package:chat_app/Widgets/chat_input.dart';
 import 'package:flutter/material.dart';
 
 Widget getChatBubble(alignment,message){
@@ -28,8 +30,6 @@ Widget getChatBubble(alignment,message){
               bottomLeft: Radius.circular(12))),
     )
  );
-
-
 }
 
 class ChatPage extends StatelessWidget {
@@ -56,38 +56,13 @@ class ChatPage extends StatelessWidget {
           Expanded(
             child: ListView(
               children: [
-                //TODO: Remove duplicated code
-                getChatBubble(Alignment.centerLeft, "Hi I'm Dihan"),
-                getChatBubble(Alignment.centerRight, "Hi Dihan"),
-                getChatBubble(Alignment.centerRight, "Hope you are doing well")
+                ChatBubble(alignment: Alignment.centerLeft, message: "Hi I'm Dihan"),
+                ChatBubble(alignment: Alignment.centerRight, message: "Hi Dihan"),
+                ChatBubble(alignment: Alignment.centerRight, message: "Hope you are doing Well DIhan")
                ],
             ),
           ),
-          Container(
-            height: 100,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.add,
-                    color: Colors.white,
-                  ),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.send,
-                    color: Colors.white,
-                  ),
-                ),
-              ],
-            ),
-            decoration: BoxDecoration(
-                color: Colors.black,
-                borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
-          )
+          ChatInput()
         ],
       ),
     );
