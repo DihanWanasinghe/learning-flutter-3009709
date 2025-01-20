@@ -10,11 +10,10 @@ void main() {
 class ChatApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Color buttonColor =Colors.blue;
     return MaterialApp(
       title: "Chat App",
       theme: ThemeData(primarySwatch: Colors.yellow),
-      home:  CounterStateful(buttonColor: buttonColor,),
+      home:  CounterStateful(buttonColor:Colors.blue),
     );
   }
 }
