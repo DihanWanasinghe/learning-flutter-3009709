@@ -45,11 +45,28 @@ class LoginPage extends StatelessWidget {
                     style: TextStyle(fontSize: 30, fontWeight: FontWeight.w300),
                   )),
               //TODO: Add the supporting text by final design
-              TextButton(
-                  onPressed: () {
-                    print('Pressed on the URL!');
-                  },
-                  child: Text('https://poojabhaumik.com'))
+            InkWell(
+              onTap: () {
+
+                print('tapped');
+              },
+              onDoubleTap: () {
+
+                print("double tapped");
+              },
+              onLongPress: (){
+                print("long press");
+
+              },
+
+              child: Column(
+                children: [
+                  Text("Use This Link"),
+                  Text('https://poojabhaumik.com')
+                ]
+              ),
+            )
+
             ],
           ),
         ),
