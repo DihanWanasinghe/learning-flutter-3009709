@@ -12,13 +12,9 @@ class LoginPage extends StatelessWidget {
       print(passwordController.text);
 
       //TODO: Add Named Routes instead of anonymous routes
-      Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) => ChatPage(
-                    username: userNameController.text,
-                  )));
-      print('login successful!');
+      Navigator.pushNamed(
+          context, '/chat',arguments: '${userNameController.text}');
+
     } else {
       print('not successful!');
     }
